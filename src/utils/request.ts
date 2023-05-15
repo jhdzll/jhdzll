@@ -1,7 +1,7 @@
 import axios from "axios";
-
+axios.defaults.headers['Content-Type'] = 'application/json;charset=utf-8'
 const service = axios.create({
-    baseURL: process.env.VUE_APP_BASE_API,
+    baseURL: import.meta.env.VITE_APP_BASE_API,
     timeout: 50000
 })
 service.interceptors.request.use(function (config) {

@@ -1,8 +1,8 @@
 import request from "@/utils/request";
-export function login(query) {
+export function login(query:Object) {
     return request({
         url: 'login',
-        method: 'get',
-        params: query
+        method: 'post',
+        data: query
     })
 }
